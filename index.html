@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de Parcelas Catastro</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Visor de Parcelas Catastro</h1>
+            <div class="controls">
+                <label for="file-select">Seleccionar archivo JSON:</label>
+                <select id="file-select">
+                    <option value="">Seleccione un archivo</option>
+                    <option value="sample-data.json">Datos de Muestra</option>
+                    <option value="parcelas_0_to_25000.json">Parcelas 0-25000</option>
+                    <option value="parcelas_25001_to_50000.json">Parcelas 25001-50000</option>
+                </select>
+                <input type="text" id="search-id" placeholder="Buscar por ID">
+                <button id="search-btn">Buscar</button>
+            </div>
+        </header>
+        
+        <main>
+            <div id="map"></div>
+            <div id="info-panel">
+                <h2>Información de Parcela</h2>
+                <div id="parcela-info">
+                    <p>Selecciona una parcela en el mapa para ver su información.</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 Visor de Parcelas Catastro | <a href="https://github.com/yourusername/catastro-viewer" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
